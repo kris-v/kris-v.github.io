@@ -3,7 +3,7 @@
     <head>
         <script src="https://kit.fontawesome.com/ab117361ad.js" crossorigin="anonymous"></script>
         <title>Reservia</title>
-        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
         <link href="images/logo/Reservia.svg" type="image/x-icon" rel="shorcut icon">
         <meta name="description" content="Find your next adventure with Reservia">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
                 <a class="nav-link" href="#" style="font-weight: bold">Sign Up</a>
             </nav>
 
-            <h1>Find a place for your dream vacation</h1>
+            <h2>Find a place for your dream vacation</h2>
 
             <p class="subtitle">Downtown or in nature</p>
 
@@ -36,8 +36,10 @@
                 <a href="#"><li class="filter-category"><i style="margin-left:0px" class="fas fa-dog"></i>Pets allowed</li></a>
             </ul>
 
-            <p id="number-of-acc"><i class="fas fa-info" style="font-size: 13px; padding: 10px"></i>More than 500 accommodations are available in this city</p>
-
+            <ul id="info-search">
+                <li class="info-item"><i class="fas fa-info"></i></li>
+                <li><p style="font-weight: 400; font-size: 1.2em">More than 500 accommodations are available in this city</p></li>
+            </ul>
         </header>
 
         <main class="combined">
@@ -47,7 +49,7 @@
                     <a href="#" class="room-view"><img class="img-search" src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
                         alt="Auberge la Cannabière"><p class="caption">Augerge la Cannebière</p>
                         <p class="price">Night starting at <span id=>25€</span></p>
-                        <div class="icons">
+                        <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -60,7 +62,7 @@
                         <img class="img-search" src="images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
                             alt="Hôtel du port"><p class="caption">Hôtel du port</p>
                         <p class="price">Night starting at <span>52€</span></p>
-                        <div class="icons">
+                        <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -73,7 +75,7 @@
                         <img class="img-search" src="images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg"
                             alt="Les mouettes Hotel"><p class="caption">Les mouettes Hotel</p>
                         <p class="price">Night starting at <span>76€</span></p>
-                        <div class="icons">
+                        <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -88,7 +90,7 @@
                         <img class="img-search" src="images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
                             alt="Hôtel de la mer"><p class="caption">Hôtel de la mer</p>
                         <p class="price">Night starting at <span>46€</span></p>
-                        <div class="icons">
+                        <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -101,7 +103,7 @@
                         <img class="img-search" src="images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
                             alt="Auberge Le Panier"><p class="caption">Auberge Le Panier</p>
                         <p class="price">Night starting at <span>23€</span></p>
-                        <div class="icons">
+                        <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -114,7 +116,7 @@
                         <img class="img-search" src="images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
                             alt="Hôtel chez Amina"><p class="caption">Hôtel chez Amina</p>
                         <p class="price">Night starting at <span>96€</span></p>
-                        <div class="icons">
+                        <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -127,12 +129,12 @@
             </section>
 
             <section class="most-popular">
-                <h2 class="section-title" style="width:80%; margin-left: 1.6em; margin-bottom: 1.4em">Most Popular<i class="fas fa-chart-line" style="background-color: whitesmoke"></i></h2>
+                <h2 id="title-popular" style="font-size: 1.2em; margin:auto;margin-bottom: 0.5em; margin-top: 2.5em; width: 80%">Most Popular</h2><i class="fas fa-chart-line"></i>
                 <a href="#" class="popular">
                     <img class="img-popular" src="images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
                     alt="Morning Sun Hotel"><p class="caption-pop">Morning Sun Hotel</p>
                     <p class="price-pop">Night starting at <span>128€</span></p>
-                    <div class="icons-popular">
+                    <div class="stars-popular" style="margin-top: 5.8em">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -145,7 +147,7 @@
                     <img class="img-popular" src="images/hebergements/1_xlarge/aw-creative-VGs8z60yT2c-unsplash.jpg"
                     alt="Au coeur de l'eau Bed and Breakfast"><p class="caption-pop">Au coeur de l'eau Bed and Breakfast</p>
                     <p class="price-pop">Night starting at <span>52€</span></p>
-                    <div class="icons-popular">
+                    <div class="stars-popular">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -155,10 +157,10 @@
                 </a>
 
                 <a href="#" class="popular">
-                    <img class="img-popular" src="images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
-                    alt="Tout bleu et Blanc Hotel"><p class="caption-pop">Tout bleu et Blanc Hotel</p>
+                    <img class="img-popular" src="images/hebergements/1_xlarge/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
+                    alt="Tout bleu et Blanc Hotel" style="width: 7.5em;"><p class="caption-pop">Tout bleu et Blanc Hotel</p>
                     <p class="price-pop">Night starting at <span>76€</span></p>
-                    <div class="icons-popular">
+                    <div class="stars-popular"  style="margin-top: 5.8em">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -171,7 +173,7 @@
 
         
 
-        <h2 class="section-title-activities">Activities in Marseille</h2>
+        <h2 id="section-title-activities">Activities in Marseille</h2>
         <section class="activities">
             <a href="#" id="picture-a"><div><img class="picture" style="height: 23em" src="images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
                 alt="Old Port"><p>Old Port</p></div></a>

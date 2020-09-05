@@ -11,6 +11,10 @@ header {
     margin: auto;
 }
 
+h1 {
+    font-size: 0.7em;
+}
+
 nav {
     text-align: right;
     padding: 30px 0px 30px 30px;
@@ -105,7 +109,6 @@ button:active {
 }
 
 .filters {
-    background-color: lightcoral;
     padding-left: 0;
 }
 
@@ -113,7 +116,6 @@ button:active {
     color: black;
     font-weight: bold;
     text-decoration: none;
-    background-color: gray;
 }
 
 .filters i {
@@ -137,10 +139,21 @@ button:active {
     background-color: whitesmoke;
 }
 
+#info-search {
+    margin: 0;
+    padding: 0;
+}
+
+.info-item {
+    margin: 0;
+    padding: 0;
+}
+
 #number-of-acc {
-    font-size: 0.9em;
-    font-weight: light;
-    background-color: lightgreen;
+    font-size: 0.8em;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
 }
 
 .combined {
@@ -151,25 +164,49 @@ button:active {
     flex-wrap: wrap-reverse;
 }
 
-.combined i {
+/* .combined i {
     color: #0065FC;
     background-color: white;
     font-size: 0.6em;
+} */
+
+.stars {
+    color: #0065FC;
+    background-color: white;
+    font-size: 0.6em;
+    width: 60%;
+    margin-left: 1.5em;
+}
+
+.stars-popular {
+    color: #0065FC;
+    background-color: white;
+    font-size: 0.6em;
+    margin-top: 4em;
+    margin-left: 1.5em;
+    width: 80%;
 }
 
 .section-title {
     margin-top: 2.4em;
     margin-bottom: 1em;
     font-size: 1.2em;
-    background-color: lightcoral;
 }
 
-.section-title-activities {
+
+#section-title-activities {
     width: 90%;
-    margin: auto;
-    margin-top: 4em;
+    margin-top: 3em;
     margin-bottom: 1.5em;
     font-size: 1.2em;
+    margin-left: 3.5em;
+}
+
+.section-title-popular {
+    margin-bottom: 1.4em;
+    margin-top: 2.4em;
+    font-size: 1.2em;
+    padding-left: 2.2em;
 }
 
 .accommodations {
@@ -187,7 +224,6 @@ button:active {
 .rooms {
     display: flex;
     justify-content: space-around;
-    background-color: lightgreen;
 }
 
 /* .accommodations-result {
@@ -230,7 +266,8 @@ button:active {
     padding-left: 15px;
     font-size: 14px;
     margin: 0;
-    background-color: red;
+    margin-top: 0.2em;
+    margin-bottom: 0.3em;
 }
 
 .price {
@@ -238,13 +275,12 @@ button:active {
     font-size: 12px;
     padding-left: 15px;
     margin: 0;
-    background-color: yellow;
+    margin-bottom: 0.5em;
 }
 
 #show-more {
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 0.9em;
-    background-color: gray;
     margin: 2em;
     margin-left: 1em;
 }
@@ -255,7 +291,6 @@ button:active {
     background-color: whitesmoke;
     border-radius: 20px;
     width: 32%;
-    background-color: lightseagreen;
 }
 
 /* #most-popular {
@@ -275,14 +310,17 @@ a:hover {
 }
 
 .caption-pop {
-    padding-left: 25px;
-    background-color: red;
+    padding-left: 15px;
+    font-size: 14px;
+    margin-bottom: 0.5em;
 }
 
 .price-pop {
     font-weight: normal;
-    font-size: 14px;
-    background-color: yellow;
+    font-size: 12px;
+    padding-left: 15px;
+    margin: 0;
+    margin-bottom: 0.5em;
 }
 
 span {
@@ -306,12 +344,13 @@ figcaption {
 }
 
 .img-popular {
-    height: 7em;
+    height: 7.6em;
     padding-top: 3px;
     padding-right: 10px;
     margin-right: 20px;
     padding-left: 3px;
-    margin: 4px;
+    padding-bottom: 2px;
+    margin: auto;
     float: left;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -370,34 +409,25 @@ footer {
     width: 7%;
 }
 
-.most-popular i {
-    color: #0065FC;
-    background-color: white;
-}
-
-.icons {
-    padding-left: 20px;
-}
-
-/* .icons-popular {
-    padding-left: 20px;
-    padding-top: 65px;
-    margin: -1px;
-} */
 
 .fa-info {
-    margin-left: 0px;
     color: #0065FC;
     border-radius: 50%;
     border: 1px solid #D7DCE3;
-    width: 10px;
-    height: 10px;
-    text-align: center;
+    width: 5px;
+    height: 5px;
+    padding: 5px;
+    padding-bottom: 6px;
 }
 
 .fa-chart-line {
     color: black;
-    font-size: 26px;
+    font-size: 1.1em;
+    width: 5%;
+    background-color: whitesmoke;
+    position: relative;
+    left: 19em;
+    bottom: 1.6em;
 }
 
 .activities {
@@ -486,9 +516,9 @@ footer {
 
 
 
-@media all and (max-device-width: 800px) {
+@media screen and (max-device-width: 480px) {
     
-    
+
     .nav-link {
         display: block;
         margin: 0;
@@ -496,55 +526,87 @@ footer {
 
     header {
         display: block;
+        width: 80%;
+        margin: auto;
+    }
+
+    .searchbar {
+        width: 100%;
+        margin: auto;
+    }
+
+    #info-search {
         margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+    
+    .info-item {
+        margin: auto;
+        padding: 0;
+        display: inline-block;
+        width: 100%;
+        font-weight: light;
     }
 
     .combined {
-        width: 100%;
-        margin: 0;
+        width: 80%;
+        margin: auto;
     }
 
     .most-popular {
         width: 100%;
         margin: 0;
+        border-radius: 0;
     }
 
-    .popular {
-        width: 90%;
+    h2 {
+        width: 100%;
         margin: auto;
     }
 
+    .popular {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+
     .accommodations {
-        width: 100%;
-        margin: 0;
+        width: 95%;
+        margin: auto;
     }
 
     .rooms {
         flex-direction: column;
-        margin: 0;
+        margin: auto;
         flex-wrap: wrap;
+        width: 100%;
     }
 
     .room-view {
-        width: 100%;
+        width: 95%;
         margin: auto;
+        margin-bottom: 1em;
         display: block;
+        padding; 0;
     }
 
     .activities {
         flex-direction: column;
-        width: 100%;
-        margin: 0;
+        width: 90%;
+        margin: auto;
     }
 
     #picture-a {
         width: 90%;
         margin: auto;
+        margin-bottom: 1em;
     }
 
     #picture-b {
         width: 90%;
         margin: auto;
+        margin-bottom: 0;
     }
     
     #picture-c {
@@ -557,8 +619,24 @@ footer {
         margin: auto;
     }
 
+    #a {
+        margin-bottom: 0;
+    }
+
+    #b {
+        margin-bottom: 0;
+    }
+
+    #c {
+        margin-bottom: 0;
+    }
+
+    #d {
+        margin-bottom: 0;
+    }
+
     footer {
-        height: 25em;
+        height: 30em;
 
     }
 
@@ -574,7 +652,7 @@ footer {
     }
 
     .img-search {
-        width: 95%;
+        width: auto;
         margin: auto;
         height: 8em;
     }
@@ -582,5 +660,4 @@ footer {
     .room-view {
         height: 13em;
     }
-
 }
