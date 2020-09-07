@@ -3,7 +3,7 @@
     <head>
         <script src="https://kit.fontawesome.com/ab117361ad.js" crossorigin="anonymous"></script>
         <title>Reservia</title>
-        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
         <link href="images/logo/Reservia.svg" type="image/x-icon" rel="shorcut icon">
         <meta name="description" content="Find your next adventure with Reservia">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,24 +12,27 @@
     <body>
         <header>
             <nav>
-                <a class="nav-link" href="#"><img id="logo" src="images/logo/Reservia@3x.png"></a>
-                <a class="nav-link" href="#">Accommodations</a>
-                <a class="nav-link" href="#">Activities</a>
-                <a class="nav-link" href="#" style="font-weight: bold">Sign Up</a>
+                <section class="nav-menu">
+                    <a class="nav-link" href="#"><img id="logo" src="images/logo/Reservia@3x.png"></a>
+                    <a class="nav-link" id="horizontal" href="#">Accommodations</a>
+                    <a class="nav-link" id="horizontal2" href="#">Activities</a>
+                    <a class="nav-link" href="#" style="font-weight: bold">Sign Up</a>
+                </section>
             </nav>
 
-            <h2>Find a place for your dream vacation</h2>
+            <h2 class="main-heading">Find a place for your dream vacation</h2>
 
             <p class="subtitle">Downtown or in nature</p>
 
             <section class="searchbar">
                 <i class="fas fa-map-marker-alt"></i>
                 <input type="text" id="search" onkeyup="myfunction()" placeholder="e.g. Marseille, France">
-                <button>Search</button>
+                <button class="button-full-screen">
+                    <i class="fas fa-search"></i><span>Search</span></button>
             </section>
 
             <ul class="filters">
-                <li><p>Filters</p></li>
+                <li id="filter-title"><p>Filters</p></li>
                 <a href="#"><li class="filter-category"><i class="fas fa-money-bill-wave"></i>Low cost</li></a>
                 <a href="#"><li class="filter-category"><i style="width: 1.15em" class="fas fa-child"></i>Family-friendly</li></a>
                 <a href="#"><li class="filter-category"><i class="fas fa-heart"></i>Romantic</li></a>
@@ -38,15 +41,15 @@
 
             <ul id="info-search">
                 <li class="info-item"><i class="fas fa-info"></i></li>
-                <li><p style="font-weight: 400; font-size: 1.2em">More than 500 accommodations are available in this city</p></li>
+                <li class="info-item"  style="margin-left: 10px"><p id="info-text" style="font-weight: 400; font-size: 1.2em">More than 500 accommodations are available in this city</p></li>
             </ul>
         </header>
 
         <main class="combined">
             <section class="accommodations">
-                <h2 class="section-title" style="margin-left:1.2em">Accommodations in Marseille</h2>
-                <div class="rooms" style="margin-bottom: 1.8em">
-                    <a href="#" class="room-view"><img class="img-search" src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                <h2 class="section-title">Accommodations in Marseille</h2>
+                <div class="rooms">
+                    <a href="#" class="room-view"><img class="img-search" src="images/hebergements/1_xlarge/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
                         alt="Auberge la Cannabière"><p class="caption">Augerge la Cannebière</p>
                         <p class="price">Night starting at <span id=>25€</span></p>
                         <div class="stars">
@@ -59,7 +62,7 @@
                     </a>
 
                     <a href="#" class="room-view">
-                        <img class="img-search" src="images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
+                        <img class="img-search" src="images/hebergements/1_xlarge/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
                             alt="Hôtel du port"><p class="caption">Hôtel du port</p>
                         <p class="price">Night starting at <span>52€</span></p>
                         <div class="stars">
@@ -72,7 +75,7 @@
                     </a>
 
                     <a href="#" class="room-view">
-                        <img class="img-search" src="images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg"
+                        <img class="img-search" src="images/hebergements/1_xlarge/reisetopia-B8WIgxA_PFU-unsplash.jpg"
                             alt="Les mouettes Hotel"><p class="caption">Les mouettes Hotel</p>
                         <p class="price">Night starting at <span>76€</span></p>
                         <div class="stars">
@@ -100,7 +103,7 @@
                     </a>
 
                     <a href="#" class="room-view">
-                        <img class="img-search" src="images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
+                        <img class="img-search" src="images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
                             alt="Auberge Le Panier"><p class="caption">Auberge Le Panier</p>
                         <p class="price">Night starting at <span>23€</span></p>
                         <div class="stars">
@@ -129,12 +132,12 @@
             </section>
 
             <section class="most-popular">
-                <h2 id="title-popular" style="font-size: 1.2em; margin:auto;margin-bottom: 0.5em; margin-top: 2.5em; width: 80%">Most Popular</h2><i class="fas fa-chart-line"></i>
+                <h2>Most Popular<i class="fas fa-chart-line"></i></h2>
                 <a href="#" class="popular">
                     <img class="img-popular" src="images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
                     alt="Morning Sun Hotel"><p class="caption-pop">Morning Sun Hotel</p>
                     <p class="price-pop">Night starting at <span>128€</span></p>
-                    <div class="stars-popular" style="margin-top: 5.8em">
+                    <div class="stars-popular">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -156,11 +159,11 @@
                     </div>
                 </a>
 
-                <a href="#" class="popular">
+                <a href="#" class="popular" id="blanc-hotel">
                     <img class="img-popular" src="images/hebergements/1_xlarge/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
                     alt="Tout bleu et Blanc Hotel" style="width: 7.5em;"><p class="caption-pop">Tout bleu et Blanc Hotel</p>
                     <p class="price-pop">Night starting at <span>76€</span></p>
-                    <div class="stars-popular"  style="margin-top: 5.8em">
+                    <div class="stars-popular">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -172,48 +175,29 @@
         </main>
 
         
-
-        <h2 id="section-title-activities">Activities in Marseille</h2>
-        <section class="activities">
-            <a href="#" id="picture-a"><div><img class="picture" style="height: 23em" src="images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
-                alt="Old Port"><p>Old Port</p></div></a>
-            <div class="frame" id="picture-b">
-                <a href="#" id="a"><div><img class="picture" style="height: 11em" src="images/activites/1_xlarge/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
-                    alt="Pomègues Fort"><p>Pomègues Fort</p></div></a>
-                <a href="#" id="b"><div><img  class="picture" style="height: 6em" src="images/activites/1_xlarge/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
-                    alt="Frioul Island"><p>Frioul Island</p></div></a>
-            </div>
-            <a href="#" id="picture-c"><div class="frame"><img  class="picture" style="height: 23em" src="images/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
-                alt="Calanques National Park"><p>Calanques National Park</p></div></a>
-            <div class="frame" id="picture-d">
-                <a href="#" id="c"><div><img  class="picture" style="height: 8.5em" src="images/activites/1_xlarge/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                    alt="Auberge la Cannabière"><p>Notre-Dame-de-la-Garde</p></div></a>
-                <a href="#" id="d"><div><img  class="picture" style="height: 8.5em" src="images/activites/1_xlarge/lena-paulin-wH2-EJoDcV0-unsplash.jpg" 
-                    alt="Notre-Dame-de-la-Garde"><p>Longchamp Park</p></div></a>
-            </div>
-        </section>
+        <div class="act-main">
+            <h2 class="act-heading">Activities  in Marseille</h2>
+            <section class="activities">
+                <a href="#" id="picture-a"><div><img class="picture" id="tall" style="height: 23em" src="images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
+                    alt="Old Port"><p>Old Port</p></div></a>
+                <div class="frame" id="picture-b">
+                    <a href="#" id="a"><div><img class="picture" style="height: 11em" src="images/activites/1_xlarge/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
+                        alt="Pomègues Fort"><p>Pomègues Fort</p></div></a>
+                    <a href="#" id="b"><div><img  class="picture" style="height: 6em" src="images/activites/1_xlarge/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
+                        alt="Frioul Island"><p>Frioul Island</p></div></a>
+                </div>
+                <a href="#" id="picture-c"><div class="frame"><img  class="picture" style="height: 23em" src="images/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
+                    alt="Calanques National Park"><p>Calanques National Park</p></div></a>
+                <div class="frame" id="picture-d">
+                    <a href="#" id="c"><div><img  class="picture" style="height: 8.5em" src="images/activites/1_xlarge/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                        alt="Notre-Dame-de-la-Garde"><p>Notre-Dame-de-la-Garde</p></div></a>
+                    <a href="#" id="d"><div><img  class="picture" style="height: 8.5em" src="images/activites/1_xlarge/lena-paulin-wH2-EJoDcV0-unsplash.jpg" 
+                        alt="Longchamp Park"><p>Longchamp Park</p></div></a>
+                </div>
+            </section>
+        </div>
         
-        <!-- <h2 id="act-heading">Activities in Marseille</h2>
-        <div class="activities">
-            <figure id="one"><a href="#"><img id="img-one" src="images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
-                alt="Old Port">
-                <figcaption class="act-caption">Old Port</figcaption></figure></a>
-            <figure id="two"><a href="#"><img  id="img-two" src="images/activites/1_xlarge/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
-                alt="Pomègues Fort">
-                <figcaption class="act-caption">Pomègues Fort</figcaption></figure></a>
-           <figure id="three"><a href="#"><img  id="img-three" src="images/activites/1_xlarge/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
-                alt="Frioul Island">
-                <figcaption class="act-caption">Frioul Island</figcaption></figure></a>
-            <figure id="four"><a href="#"><img  id="img-four" src="images/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
-                alt="Calanques National Park">
-                <figcaption class="act-caption">Calanques National Park</figcaption></figure></a>
-           <figure id="five"><a href="#"><img  id="img-five" src="images/activites/1_xlarge/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                alt="Auberge la Cannabière">
-                <figcaption class="act-caption">Notre-Dame-de-la-Garde</figcaption></figure></a>
-            <figure id="six"><a href="#"><img  id="img-six" src="images/activites/1_xlarge/lena-paulin-wH2-EJoDcV0-unsplash.jpg" 
-                alt="Notre-Dame-de-la-Garde">
-                <figcaption class="act-caption">Longchamp Park</figcaption></figure></a>
-        </div> -->
+   
         <footer>
             <div class="footer-main">
                 <section class="footer-section">

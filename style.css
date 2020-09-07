@@ -40,7 +40,22 @@ nav a {
     padding: 0px;
 }
 
-li {
+#filter-title {
+    display: inline-block;
+    margin: 20px;
+    margin-left: 0px;
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+    padding-left: 0px;
+}
+
+.filter-category {
+    border-radius: 35px;
+    text-align: center;
+    border: 1px solid RGB(220, 220, 220);
+    padding-right: 1em;
+    margin: 15px;
     display: inline-block;
     margin: 20px;
     margin-left: 0px;
@@ -48,6 +63,7 @@ li {
     font-size: 12px;
     color: black;
     padding-left: 0px;
+
 }
 
 h1 {
@@ -80,15 +96,19 @@ input {
     width: 70%;
 }
 
-button {
+.button-full-screen {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #0065FC;
     color: #F3F6F9;
-    font-weight: 500;
+    font-weight:bold;
     font-size: 1em;
     width: 28%;
     border: none;
+}
+
+.fa-search {
+    display: none;
 }
 
 button:hover {
@@ -142,11 +162,13 @@ button:active {
 #info-search {
     margin: 0;
     padding: 0;
+    font-size: 0.8em;
 }
 
 .info-item {
     margin: 0;
     padding: 0;
+    display: inline-block;
 }
 
 #number-of-acc {
@@ -164,12 +186,6 @@ button:active {
     flex-wrap: wrap-reverse;
 }
 
-/* .combined i {
-    color: #0065FC;
-    background-color: white;
-    font-size: 0.6em;
-} */
-
 .stars {
     color: #0065FC;
     background-color: white;
@@ -182,19 +198,19 @@ button:active {
     color: #0065FC;
     background-color: white;
     font-size: 0.6em;
-    margin-top: 4em;
-    margin-left: 1.5em;
-    width: 80%;
+    width: 7em;
+    display: inline-block;
 }
 
 .section-title {
-    margin-top: 2.4em;
-    margin-bottom: 1em;
+    margin-top: 1.4em;
+    margin-bottom: 1;
     font-size: 1.2em;
+    margin-left: 1.2em;
 }
 
 
-#section-title-activities {
+.act-heading {
     width: 90%;
     margin-top: 3em;
     margin-bottom: 1.5em;
@@ -202,11 +218,14 @@ button:active {
     margin-left: 3.5em;
 }
 
-.section-title-popular {
-    margin-bottom: 1.4em;
-    margin-top: 2.4em;
+.most-popular h2 {
     font-size: 1.2em;
-    padding-left: 2.2em;
+    margin: auto;
+    margin-bottom: 1.8em;
+    margin-top: 2.5em;
+    min-width: 75%;
+    width: 80%;
+    box-sizing: border-box;
 }
 
 .accommodations {
@@ -225,13 +244,6 @@ button:active {
     display: flex;
     justify-content: space-around;
 }
-
-/* .accommodations-result {
-    padding-bottom: 0px;
-    padding-left: 40px;
-    margin: 0px auto;
-    margin-top: 40px;
-} */
 
 .room-view {
     width: 29%;
@@ -283,6 +295,7 @@ button:active {
     margin-bottom: 0.9em;
     margin: 2em;
     margin-left: 1em;
+    width: fit-content;
 }
 
 .most-popular {
@@ -292,12 +305,6 @@ button:active {
     border-radius: 20px;
     width: 32%;
 }
-
-/* #most-popular {
-    padding: 20px;
-    padding-bottom: 0px;
-    padding-left: 40px;
-} */
 
  a {
     color: black;
@@ -327,11 +334,6 @@ span {
     font-weight: bold;
 }
 
-figcaption {
-    font-weight: bold;
-    font-size: 14px;
-    padding: 5px;
-}
 
 .popular {
     background-color: white;
@@ -363,17 +365,8 @@ figcaption {
     border-top-right-radius: 20px;
 }
 
-.act-caption {
-    padding-bottom: 20px;
-    padding-left: 15px;
-    text-align: left;
-    font-weight: bold;
-    font-size: 16px;
-}
-
 footer {
     background-color: whitesmoke;
-    height: 15em;
     width: 100%;
     
 }
@@ -388,11 +381,15 @@ footer {
     width: 15em;
 }
 
+.footer-section p {
+    width: fit-content;
+}
+
 .footer-heading {
     font-size: 1.1em;
 }
 
-.footer-link{
+.footer-link {
     color: black;
     font-weight: 480;
     font-size: 0.8em;
@@ -416,18 +413,14 @@ footer {
     border: 1px solid #D7DCE3;
     width: 5px;
     height: 5px;
-    padding: 5px;
-    padding-bottom: 6px;
+    padding: 7px;
 }
 
 .fa-chart-line {
-    color: black;
+    margin-bottom: auto;
     font-size: 1.1em;
-    width: 5%;
-    background-color: whitesmoke;
-    position: relative;
-    left: 19em;
-    bottom: 1.6em;
+    text-align: right;
+    margin-left: 10.5rem;
 }
 
 .activities {
@@ -518,15 +511,13 @@ footer {
 
 @media screen and (max-device-width: 480px) {
     
-
-    .nav-link {
-        display: block;
-        margin: 0;
+    body {
+        width: 100%;
     }
 
     header {
         display: block;
-        width: 80%;
+        width: 100%;
         margin: auto;
     }
 
@@ -535,60 +526,241 @@ footer {
         margin: auto;
     }
 
-    #info-search {
-        margin: 0;
-        padding: 0;
-        display: inline-block;
-    }
-    
-    .info-item {
-        margin: auto;
-        padding: 0;
-        display: inline-block;
-        width: 100%;
-        font-weight: light;
+    .nav-menu {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 90%;
+        margin-bottom: 3em;
     }
 
-    .combined {
+    .main-heading {
+        width: 85%;
+        margin: auto;
+    }
+
+    .subtitle {
+        width: 85%;
+        margin: 1.2em auto;
+        margin-bottom: 2em;
+        font-size: 0.85em;
+    }
+
+    .searchbar {
+        width: 92%;
+        margin: auto;
+        margin-left: 1.5em;
+    }
+
+    .button-full-screen {
+        border-radius: 15px;
+        background-color: #0065FC;
+        color: #F3F6F9;
+        font-weight:bold;
+        font-size: 1em;
+        width: 17%;
+        border: none;
+        position: relative;
+        right: 1em;
+    }
+
+    .button-full-screen span {
+        display: none;
+    }
+    
+    .fa-search {
+        display: initial;
+    }
+
+    .nav-link {
+        margin: 0;
+    }
+
+    #logo {
+        position: absolute;
+        top: 1em;
+        left: 2em;
+    }
+
+    #horizontal {
+        position: absolute;
+        top: 7em;
+        right: 12.5em;
+        padding-bottom: 0.5em;
+        border-bottom: 3px solid #0065FC;
+        width: 14em;
+        margin: 0;
+        text-align: center;
+        
+    }
+
+    #horizontal2 {
+        position: absolute;
+        top: 7em;
+        right: 0em;
+        padding-bottom: 0.5em;
+        border-bottom: 3px solid lightgray;
+        width: 13em;
+        margin: 0;
+        text-align: center;
+        color: black;
+    }
+
+    .fa-info {
+        color: #0065FC;
+        border-radius: 50%;
+        border: 1px solid #D7DCE3;
+        width: 5px;
+        height: 5px;
+        padding: 8px;
+        padding-bottom: 6px;
+        position: relative;
+        top: 1.5em;
+        left: 1.2em;
+    }
+
+    #info-text {
+        margin-left: 15px;
         width: 80%;
         margin: auto;
+        margin-bottom: 1em;
+    }
+
+
+    #filter-title {
+        display: block;
+        font-weight: bold;
+        font-size: 14px;
+        color: black;
+        text-align: center;
+    }
+    
+
+    .filters {
+        width: 90%;
+        margin: auto;
+    }
+
+    .button-text {
+        display: none;
+    }
+
+    .filter-category {
+        border-radius: 35px;
+        text-align: center;
+        border: 1px solid RGB(220, 220, 220);
+        padding-right: 1em;
+        margin: 15px auto;
+        width: fit-content;
+        display: block;
+        font-weight: bold;
+        text-align: center;
+        font-size: 12px;
+        color: black;
+        padding-left: 0px;
+    
+    }
+
+    #info-search {
+        padding-bottom: 1em;
+        font-size: 0.8em;
+        margin: auto;
+    }
+
+
+    .combined {
+        width: 100%;
+    }
+
+    .accommodations {
+        width: 100%;
+        margin: 0;
+        background-color: white;
+    }    
+
+    .section-title {
+        font-size: 1.2em;
+        width: 90%;
+        margin: 1em auto;
+        text-align: center
+    }
+
+    .most-popular h2 {
+        font-size: 1.2em;
+        text-align: left;
+        margin-top: 2.5em;
+        margin-left: 2em;
+        width: 90%;
     }
 
     .most-popular {
         width: 100%;
         margin: 0;
+        padding-bottom: 2em;
+        margin-bottom: 1em;
         border-radius: 0;
     }
 
-    h2 {
-        width: 100%;
-        margin: auto;
+    .fa-chart-line {
+        font-size: 1.1em;
+        margin-left: 9.5rem;
     }
 
     .popular {
         width: 80%;
+        margin-top: 0;
         margin: auto;
         margin-bottom: 1em;
-    }
-
-    .accommodations {
-        width: 95%;
-        margin: auto;
     }
 
     .rooms {
         flex-direction: column;
+        width: 90%;
         margin: auto;
-        flex-wrap: wrap;
-        width: 100%;
+        box-sizing: border-box;
     }
 
     .room-view {
-        width: 95%;
-        margin: auto;
+        width: 98%;
         margin-bottom: 1em;
         display: block;
-        padding; 0;
+        height: 13em;
+    }
+
+    .img-search {
+        width: 97%;
+        height: 8em;
+        margin: auto;
+    }
+
+    .caption {
+        padding-left: 15px;
+        font-size: 14px;
+        margin: 0;
+        margin-top: 0.2em;
+        margin-bottom: 0.3em;
+    }
+    
+    .price {
+        font-weight: normal;
+        font-size: 12px;
+        padding-left: 15px;
+        margin: 0;
+        margin-bottom: 0.5em;
+    }
+    
+    #show-more {
+        font-size: 14px;
+        margin-bottom: 0.9em;
+        margin: 2em;
+        margin-left: 1em;
+    }
+
+    .act-heading {
+        font-size: 1.2em;
+        width: 90%;
+        margin: 1em auto;
+        
+        text-align: center
     }
 
     .activities {
@@ -606,21 +778,23 @@ footer {
     #picture-b {
         width: 90%;
         margin: auto;
-        margin-bottom: 0;
+        margin-bottom: 1em;
     }
     
     #picture-c {
         width: 90%;
         margin: auto;
+        margin-bottom: 1em;
     }
     
     #picture-d {
         width: 90%;
         margin: auto;
+        margin-bottom: 3em;
     }
 
     #a {
-        margin-bottom: 0;
+        margin-bottom: 1em;
     }
 
     #b {
@@ -628,7 +802,248 @@ footer {
     }
 
     #c {
+        margin-bottom: 1em
+    }
+
+    #d {
         margin-bottom: 0;
+    }
+
+
+    footer {
+        height: 30em;
+    }
+
+    .footer-main {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        width: 80%;
+        align-content: left;
+    }
+}
+
+
+@media screen and (min-width: 1400px) {
+    header {
+        width: 70%;
+    }
+
+    .combined {
+        width: 70%;
+    }
+
+    footer {
+        height: 17em;
+    }
+
+    .act-main {
+        width: 76%;
+        margin: auto;
+    }
+
+    .footer-main {
+        width: 80%;
+        margin: auto;
+    }
+
+    .fa-chart-line {
+        position: absolute;
+        right: 16.5em;
+    }
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 1080px) {
+
+    body {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .main-heading {
+        width: 80%;
+        margin: 1em auto;
+    }
+
+    .subtitle {
+        width: 80%;
+        margin: 1em auto;
+    }
+
+    .nav-link {
+        display: block;
+        margin: 0;
+    }
+
+    header {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+
+    .searchbar {
+        width: 80%;
+        margin: auto;
+    }
+
+    .fa-info {
+        color: #0065FC;
+        border-radius: 50%;
+        border: 1px solid #D7DCE3;
+        width: 5px;
+        height: 5px;
+        padding: 5px;
+        padding-bottom: 6px;
+        position: relative;
+        top: 3em;
+    }
+
+    #info-text {
+        margin-left: 15px;
+    }
+
+
+    #filter-title {
+        display: block;
+        font-weight: bold;
+        font-size: 12px;
+        color: black;
+        padding-left: 0px;
+        text-align: center;
+    }
+    
+
+    .filter-category {
+        border-radius: 35px;
+        text-align: center;
+        border: 1px solid RGB(220, 220, 220);
+        padding-right: 1em;
+        margin: 15px auto;
+        width: fit-content;
+        display: block;
+        font-weight: bold;
+        text-align: center;
+        font-size: 12px;
+        color: black;
+        padding-left: 0px;
+    
+    }
+
+    .combined {
+        width: 100%;
+    }
+
+    .accommodations {
+        width: 100%;
+        margin: auto;
+        margin: 0;
+    }    
+
+    .most-popular {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 3em;
+        border-radius: 0;
+    }
+
+
+    .popular {
+        width: 90%;
+        max-width: 23em;
+        min-width: 21em;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+
+    #blanc-hotel {
+        margin-bottom: 3em;
+    }
+
+    .rooms {
+        flex-direction: column;
+        width: 90%;
+        max-width: 28em;
+        margin: 0px auto;
+    }
+
+    .room-view {
+        width: 90%;
+        max-width: 25em;
+        margin-top: 0em;
+        height: 15em;
+        display: block;
+        margin: 1em auto;
+    }
+
+    .caption {
+        padding-left: 15px;
+        font-size: 14px;
+        margin: 0;
+        margin-top: 0.2em;
+        margin-bottom: 0.3em;
+    }
+    
+    .price {
+        font-weight: normal;
+        font-size: 12px;
+        padding-left: 15px;
+        margin: 0;
+        margin-bottom: 0.5em;
+    }
+    
+    #show-more {
+        font-size: 14px;
+        margin-bottom: 0.9em;
+        margin: 2em auto;
+    }
+
+    .activities {
+        flex-direction: column;
+        margin: auto;
+        width: 90%;
+        max-width: 30em;
+    }
+
+    #picture-a {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 2em;
+    }
+
+    #picture-b {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 0;
+        margin-bottom: 2em;
+    }
+    
+    #picture-c {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 2em;
+    }
+    
+    #picture-d {
+        width: 90%;
+        margin: auto;
+        margin-bottom:
+    }
+
+    #a {
+        margin-bottom: 2em;
+    }
+
+    #b {
+        margin-bottom: 0;
+    }
+
+    #c {
+        margin-bottom: 2em;
     }
 
     #d {
@@ -636,7 +1051,7 @@ footer {
     }
 
     footer {
-        height: 30em;
+        margin-top: 3em;
 
     }
 
@@ -652,12 +1067,81 @@ footer {
     }
 
     .img-search {
-        width: auto;
+        height: 10em;
+        width: 97.5%;
         margin: auto;
-        height: 8em;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
 
-    .room-view {
-        height: 13em;
+
+    .stars-popular {
+        color: #0065FC;
+        background-color: white;
+        font-size: 0.6em;
+        min-width: 4em;
+        margin: auto;
     }
+
+    .nav-link {
+        color: #0065FC;
+        font-weight: 480;
+        font-size: 0.9em;
+        margin: 10px 30px;
+        display: block;
+    }
+
+    .most-popular h2 {
+        font-size: 1.2em;
+        text-align: left;
+        margin-top: 2.5em;
+        width: 90%;
+        margin: 20px auto;
+        text-align: center;
+    }
+    
+    .fa-chart-line {
+        margin-left: 10em;
+        font-size: 1.1em;
+    }
+
+    #info-search {
+        margin: 0;
+        padding: 0;
+        font-size: 0.8em;
+        width: 80%;
+        margin: auto;
+    }
+
+    .info-item {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    
+     .act-heading {
+        font-size: 1.2em;
+        margin-top: 2.5em;
+        width: 90%;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 1.2em;
+        margin-bottom: 0;
+        width: 90%;
+        margin: auto;
+        text-align: center
+    }
+
+    .act-main {
+        width: 92%;
+        margin: auto;
+        max-width: 28em;
+    }
+    
 }
