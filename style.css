@@ -555,7 +555,7 @@ footer {
         border-radius: 15px;
         background-color: #0065FC;
         color: #F3F6F9;
-        font-weight:bold;
+        font-weight: bold;
         font-size: 1em;
         width: 17%;
         border: none;
@@ -599,7 +599,7 @@ footer {
         right: 0em;
         padding-bottom: 0.5em;
         border-bottom: 3px solid lightgray;
-        width: 13em;
+        width: 12.5em;
         margin: 0;
         text-align: center;
         color: black;
@@ -700,9 +700,18 @@ footer {
         border-radius: 0;
     }
 
+    .stars-popular {
+        color: #0065FC;
+        background-color: white;
+        font-size: 0.6em;
+        width: 7em;
+        margin: auto;
+    }
+
     .fa-chart-line {
         font-size: 1.1em;
-        margin-left: 9.5rem;
+        right: 2em;
+        position: absolute;
     }
 
     .popular {
@@ -811,7 +820,7 @@ footer {
 
 
     footer {
-        height: 30em;
+        height: 32em;
     }
 
     .footer-main {
