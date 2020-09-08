@@ -198,6 +198,7 @@ button:active {
     color: #0065FC;
     background-color: white;
     font-size: 0.6em;
+    width: 7em;
     display: inline-block;
 }
 
@@ -364,10 +365,13 @@ span {
     border-top-right-radius: 20px;
 }
 
+.img-tall {
+    height: 23em;
+}
+
 footer {
     background-color: whitesmoke;
     width: 100%;
-    
 }
 
 .footer-main {
@@ -431,7 +435,7 @@ footer {
     margin-bottom: 4em;
 }
 
-#picture-a {
+.picture-tall {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
     margin: 1.5em;
@@ -441,19 +445,15 @@ footer {
     margin-bottom: 0;
 }
 
+.picture.img-short {
+    display: none;
+}
+
 #picture-b {
     display: flex;
     flex-direction: column;
     margin: 1.5em;
-    width: 23%;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-#picture-c {
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 1.5em;
+    margin-right: 3em;
     width: 23%;
     margin-top: 0;
     margin-bottom: 0;
@@ -467,6 +467,14 @@ footer {
     width: 23%;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.img-pomegues {
+    height: 11em;
+}
+
+.img-frioul {
+    height: 6em;
 }
 
 .activities a {
@@ -703,7 +711,7 @@ footer {
         color: #0065FC;
         background-color: white;
         font-size: 0.6em;
-        width: fit-content;
+        width: 7em;
         margin: auto;
     }
 
@@ -777,7 +785,16 @@ footer {
         margin: auto;
     }
 
-    #picture-a {
+    .img-tall {
+        display: none;
+    }
+
+    .picture.img-short {
+        height: 8.5em;
+        display: initial;
+    }
+
+    .picture-tall {
         width: 90%;
         margin: auto;
         margin-bottom: 1em;
@@ -789,16 +806,19 @@ footer {
         margin-bottom: 1em;
     }
     
-    #picture-c {
-        width: 90%;
-        margin: auto;
-        margin-bottom: 1em;
-    }
     
     #picture-d {
         width: 90%;
         margin: auto;
         margin-bottom: 3em;
+    }
+
+    .picture.img-pomegues {
+        height: 8.5em;
+    }
+
+    .picture.img-frioul {
+        height: 8.5em;
     }
 
     #a {
@@ -1017,7 +1037,7 @@ footer {
         max-width: 30em;
     }
 
-    #picture-a {
+    .picture-tall {
         width: 90%;
         margin: auto;
         margin-bottom: 2em;
@@ -1030,16 +1050,10 @@ footer {
         margin-bottom: 2em;
     }
     
-    #picture-c {
-        width: 90%;
-        margin: auto;
-        margin-bottom: 2em;
-    }
-    
     #picture-d {
         width: 90%;
         margin: auto;
-        margin-bottom: 2em;
+        margin-bottom:
     }
 
     #a {
