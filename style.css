@@ -1,10 +1,11 @@
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: Raleway, Arial;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     margin: auto;
 }
+
 
 header {
     width: 90%;
@@ -12,63 +13,80 @@ header {
 }
 
 h1 {
-    font-size: 0.7em;
+    font-size: 26px;
 }
 
 nav {
-    text-align: right;
-    padding: 30px 0px 30px 30px;
-    margin-bottom: 25px;
+    margin-bottom: 3em;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
 }
 
-nav a {
+.nav-desktop {
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 77%;
+}
+
+.nav-desktop a {
     color: #0065FC;
-    font-weight: 480;
+    font-weight: 300;
     font-size: 0.9em;
-    margin: 75px;
-    margin-bottom: 50px;
-    margin-right: 0px;
+    margin: 0;
+}
+
+.nav-sub-menu a {
+    color: #0065FC;
+    font-weight: 300;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.nav-sub-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+    width: 15%;
+}
+
+.nav-link {
+    margin: 25px;
+}
+
+.nav-link.acc-link {
+    text-align: right;
 }
 
 #logo {
-    float: left;
     height: 50px;
-    width: auto;
-    position: relative;
-    bottom: 20px;
-    right: 30px;
-    padding: 0px;
+    margin-top: 10px;
+    width: 10%;
+    min-width: 6em;
 }
 
-#filter-title {
-    display: inline-block;
-    margin: 20px;
+.filter-title {
     margin-left: 0px;
     font-weight: bold;
     font-size: 14px;
     color: black;
     padding-left: 0px;
+    align-self: center;
 }
 
 .filter-category {
     border-radius: 35px;
     text-align: center;
     border: 1px solid RGB(220, 220, 220);
-    padding-right: 1em;
     margin: 15px;
-    display: inline-block;
     margin: 20px;
     margin-left: 0px;
     font-weight: bold;
     font-size: 12px;
     color: black;
     padding-left: 0px;
-
-}
-
-h1 {
-    font-size: 26px;
-    margin-bottom: 0px;
 }
 
 .subtitle {
@@ -79,7 +97,8 @@ h1 {
     display: flex;
     flex-direction: row;
     align-items: left;
-    width: 30%;
+    width: 28%;
+    margin-bottom: 2em;
 }
 
 input:focus {
@@ -111,7 +130,7 @@ input {
     display: none;
 }
 
-button:hover {
+.button-full-screen:hover {
     background-color: #3579D6;
     text-decoration: none;
     cursor: pointer;
@@ -119,56 +138,105 @@ button:hover {
     outline: none;
 }
 
-button:focus {
+.button-full-screen:focus {
     outline: none;
 }
 
-button:active {
+.button-full-screen:active {
     outline: none;
     border: 0px;
 }
 
 .filters {
-    padding-left: 0;
+    display: flex;
+    flex-direction: row;
 }
 
-.filters a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
+.filter-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
 }
 
-.filters i {
+.filter-buttons i {
     color: #0065FC;
     background-color: #DEEBFF;
     border-radius: 50%;
     font-size: 16px;
-    padding: 10px;
-    margin-right: 0.5em;
+    padding: 14px;
+    margin: 0;
+}
+
+.fa-child {
+    height: 18px;
+    width: 18px;
+}
+
+.filter-btn {
+    border-radius: 45px;
+    background-color: white;
+    border: none;
+    font-family: 'Raleway';
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 25px;
+    border: 2px solid RGB(220, 220, 220);
+    padding: 0;
+    margin: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.filter-name {
+    align-items: center;
+    margin: 0 15px;
+    padding: 0;
+}
+
+.filter-btn:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: gray;
+}
+
+.filter-btn:focus {
+    outline: none;
+}
+
+.fitler-btn:active {
+    outline: none;
+    border: 0px;
 }
 
 .filter-category {
-    border-radius: 35px;
+    border-radius: 25px;
+    border: 2px solid RGB(220, 220, 220);
+    margin: 0;
+}
+
+.info-search {
+    display: flex;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    width: 32%;
+    min-width: 20em;
+}
+
+.fa-info {
+    color: #0065FC;
+    border-radius: 50%;
+    border: 1px solid #D7DCE3;
+    width: 4px;
+    height: 3px;
+    padding: 8px;
+    line-height: 4px;
     text-align: center;
-    border: 1px solid RGB(220, 220, 220);
-    padding-right: 1em;
-    margin: 15px;
+    font-size: 12px;
 }
 
-.filter-category:hover {
-    background-color: whitesmoke;
-}
-
-#info-search {
+.info-text {
     margin: 0;
-    padding: 0;
-    font-size: 0.8em;
-}
-
-.info-item {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
+    margin-left: 0.5em;
 }
 
 #number-of-acc {
@@ -198,7 +266,7 @@ button:active {
     color: #0065FC;
     background-color: white;
     font-size: 0.6em;
-    width: fit-content;
+    width: 7em;
     display: inline-block;
 }
 
@@ -216,16 +284,6 @@ button:active {
     margin-bottom: 1.5em;
     font-size: 1.2em;
     margin-left: 3.5em;
-}
-
-.most-popular h2 {
-    font-size: 1.2em;
-    margin: auto;
-    margin-bottom: 1.8em;
-    margin-top: 2.5em;
-    min-width: 75%;
-    width: 80%;
-    box-sizing: border-box;
 }
 
 .accommodations {
@@ -253,15 +311,15 @@ button:active {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.figure:hover {
+/* .figure:hover {
     filter: brightness(95%);
     color: black;
-}
+} */
 
-.popular:hover {
+/* .popular:hover {
     filter: brightness(95%);
     color: black;
-}
+} */
 
 .img-search {
     height: 6em;
@@ -371,31 +429,43 @@ span {
 
 footer {
     background-color: whitesmoke;
-    width: 100%;
 }
 
 .footer-main {
     display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .footer-section {
-    padding: 10px 10px;
-    margin: 0px auto;
-    width: 15em;
+    display: flex;
+    flex-direction: column;
+    margin: 2em 7.5em;
 }
 
-.footer-section p {
-    width: fit-content;
+.about {
+    margin-left: 0;
 }
 
 .footer-heading {
-    font-size: 1.1em;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
 }
 
 .footer-link {
     color: black;
     font-weight: 480;
     font-size: 0.8em;
+    margin: 5px 0;
+    width: fit-content;
 }
 
 .fa-map-marker-alt {
@@ -409,21 +479,19 @@ footer {
     width: 7%;
 }
 
+.most-popular-heading-with-icon {
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5em;
+}
 
-.fa-info {
-    color: #0065FC;
-    border-radius: 50%;
-    border: 1px solid #D7DCE3;
-    width: 5px;
-    height: 5px;
-    padding: 7px;
+.most-popular-heading {
+    font-size: 1.2em;
+    margin: 0;
 }
 
 .fa-chart-line {
-    margin-bottom: auto;
-    font-size: 1.1em;
-    text-align: right;
-    margin-left: 10.5rem;
+    font-size: 22px;
 }
 
 .activities {
@@ -523,26 +591,68 @@ footer {
     }
 
     header {
-        display: block;
         width: 100%;
-        margin: auto;
     }
 
-    .searchbar {
-        width: 100%;
-        margin: auto;
+    .nav-link {
+        margin: 0;
     }
 
-    .nav-menu {
+
+    nav {
+        margin: 1em 0 2em 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-desktop {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+        width: 50%;
+    }
+
+    .nav-sub-menu {
+        margin: 0;
+        width: 50%;
         display: flex;
         flex-direction: column-reverse;
-        width: 90%;
-        margin-bottom: 3em;
+        text-align: center;
+    }
+
+    .nav-link.acc-link {
+        border-bottom: 3px solid #0065FC;
+        padding-bottom: 7px;
+        text-align: center;
+    }
+
+    .nav-link.activ-link {
+        border-bottom: 3px solid whitesmoke;
+        padding-bottom: 7px;
+        color: black;
+    }
+
+    .nav-link.sign-up {
+        text-align: right;
+        margin-right: 30px;
+        align-self: right;
+        margin-top: 10px;
+    }
+
+    #logo {
+        height: 40px;
+        margin: 0;
+        margin-bottom: 15px;
+        margin-left: 30px;
+        width: 45%;
+        min-width: 45%;
     }
 
     .main-heading {
         width: 85%;
         margin: auto;
+        font-size: 24px;
     }
 
     .subtitle {
@@ -553,9 +663,8 @@ footer {
     }
 
     .searchbar {
-        width: 92%;
+        width: 90%;
         margin: auto;
-        margin-left: 1.5em;
     }
 
     .button-full-screen {
@@ -566,8 +675,6 @@ footer {
         font-size: 1em;
         width: 17%;
         border: none;
-        position: relative;
-        right: 1em;
     }
 
     .button-full-screen span {
@@ -578,73 +685,30 @@ footer {
         display: initial;
     }
 
-    .nav-link {
-        margin: 0;
-    }
 
-    #logo {
-        position: absolute;
-        top: 1em;
-        left: 2em;
-    }
-
-    #horizontal {
-        position: absolute;
-        top: 7em;
-        right: 12.5em;
-        padding-bottom: 0.5em;
-        border-bottom: 3px solid #0065FC;
-        width: 14em;
-        margin: 0;
-        text-align: center;
-        
-    }
-
-    #horizontal2 {
-        position: absolute;
-        top: 7em;
-        right: 0em;
-        padding-bottom: 0.5em;
-        border-bottom: 3px solid lightgray;
-        width: 12.5em;
-        margin: 0;
-        text-align: center;
-        color: black;
-    }
-
-    .fa-info {
-        color: #0065FC;
-        border-radius: 50%;
-        border: 1px solid #D7DCE3;
-        width: 5px;
-        height: 5px;
-        padding: 8px;
-        padding-bottom: 6px;
-        position: relative;
-        top: 1.5em;
-        left: 1.2em;
-    }
-
-    #info-text {
-        margin-left: 15px;
-        width: 80%;
-        margin: auto;
-        margin-bottom: 1em;
-    }
-
-
-    #filter-title {
-        display: block;
+    .filter-title {
         font-weight: bold;
         font-size: 14px;
         color: black;
-        text-align: center;
+        align-self: flex-start;
+        margin-left: 20px;
     }
     
 
     .filters {
-        width: 90%;
-        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+    }
+
+    .filter-btn {
+        margin: 10px;
+    }
+
+    .filter-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 5px;
     }
 
     .button-text {
@@ -655,27 +719,20 @@ footer {
         border-radius: 35px;
         text-align: center;
         border: 1px solid RGB(220, 220, 220);
-        padding-right: 1em;
-        margin: 15px auto;
-        width: fit-content;
-        display: block;
         font-weight: bold;
-        text-align: center;
         font-size: 12px;
+        margin: 5px auto;
         color: black;
-        padding-left: 0px;
     
     }
 
-    #info-search {
-        padding-bottom: 1em;
-        font-size: 0.8em;
-        margin: auto;
+    .info-search {
+        margin: 15px 0 30px 15px;
     }
-
 
     .combined {
         width: 100%;
+        margin: 0;
     }
 
     .accommodations {
@@ -688,16 +745,15 @@ footer {
         font-size: 1.2em;
         width: 90%;
         margin: 1em auto;
-        text-align: center
     }
 
-    .most-popular h2 {
-        font-size: 1.2em;
-        text-align: left;
-        margin-top: 2.5em;
-        margin-left: 2em;
-        width: 90%;
+    .most-popular-heading-with-icon {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin-bottom: 1.5em;
     }
+
 
     .most-popular {
         width: 100%;
@@ -711,15 +767,14 @@ footer {
         color: #0065FC;
         background-color: white;
         font-size: 0.6em;
-        width: fit-content;
+        width: 7em;
         margin: auto;
     }
 
     .fa-chart-line {
-        font-size: 1.1em;
-        right: 2em;
-        position: absolute;
+        font-size: 22px;
     }
+
 
     .popular {
         width: 80%;
@@ -730,15 +785,13 @@ footer {
 
     .rooms {
         flex-direction: column;
-        width: 90%;
+        width: 88%;
         margin: auto;
-        box-sizing: border-box;
     }
 
     .room-view {
-        width: 98%;
+        width: 100%;
         margin-bottom: 1em;
-        display: block;
         height: 13em;
     }
 
@@ -773,10 +826,8 @@ footer {
 
     .act-heading {
         font-size: 1.2em;
-        width: 90%;
+        width: 80%;
         margin: 1em auto;
-        
-        text-align: center
     }
 
     .activities {
@@ -837,18 +888,19 @@ footer {
         margin-bottom: 0;
     }
 
-
-    footer {
-        height: 32em;
-    }
-
     .footer-main {
         flex-direction: column;
+        width: 80%;
+        justify-content: left;
+        align-items: left;
     }
 
     .footer-section {
-        width: 80%;
-        align-content: left;
+        margin: 0.9em 0;
+    }
+
+    .footer-section.about {
+        margin-top: 2em;
     }
 }
 
@@ -904,7 +956,6 @@ footer {
     }
 
     .nav-link {
-        display: block;
         margin: 0;
     }
 
@@ -919,21 +970,6 @@ footer {
         margin: auto;
     }
 
-    .fa-info {
-        color: #0065FC;
-        border-radius: 50%;
-        border: 1px solid #D7DCE3;
-        width: 5px;
-        height: 5px;
-        padding: 5px;
-        padding-bottom: 6px;
-        position: relative;
-        top: 3em;
-    }
-
-    #info-text {
-        margin-left: 15px;
-    }
 
 
     #filter-title {
@@ -1053,7 +1089,7 @@ footer {
     #picture-d {
         width: 90%;
         margin: auto;
-        margin-bottom:
+        margin-bottom: 0em;
     }
 
     #a {
@@ -1115,7 +1151,7 @@ footer {
         display: block;
     }
 
-    .most-popular h2 {
+    .most-popular-heading {
         font-size: 1.2em;
         text-align: left;
         margin-top: 2.5em;
@@ -1129,11 +1165,8 @@ footer {
         font-size: 1.1em;
     }
 
-    #info-search {
-        margin: 0;
-        padding: 0;
-        font-size: 0.8em;
-        width: 80%;
+    .info-search {
+        width: 50%;
         margin: auto;
     }
 
