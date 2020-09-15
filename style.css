@@ -726,15 +726,15 @@ footer {
     }
 
     .filters button:nth-child(2) {
-        order: 2;
+        order: 3;
     }
 
     .filters button:nth-child(3) {
-        order: 4;
+        order: 2;
     }
 
     .filters button:nth-child(4) {
-        order: 3;
+        order: 4;
     }
 
     .button-text {
