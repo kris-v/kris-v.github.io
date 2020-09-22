@@ -593,7 +593,7 @@ footer {
 
 
 
-@media screen and (min-device-width: 300px) and (max-device-width: 480px) {
+@media screen and (min-device-width: 300px) and (max-device-width: 450px) {
     
     body {
         width: 100%;
@@ -724,7 +724,8 @@ footer {
 
     .filters button:nth-child(1) {
         order: 1;
-		width: 40%;
+        width: 40%;
+        max-width: 13em;
     }
 
     .filters button:nth-child(2) {
@@ -733,7 +734,8 @@ footer {
 
     .filters button:nth-child(3) {
         order: 2;
-		width: 45%;
+        width: 45%;
+        max-width: 12em;
     }
 
     .filters button:nth-child(4) {
