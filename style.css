@@ -738,7 +738,8 @@ footer {
 
     .filters button:nth-child(4) {
         order: 4;
-		width: 55%;
+        width: 55%;
+        max-width: 15em;
     }
 
     .button-text {
