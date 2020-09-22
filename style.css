@@ -712,17 +712,19 @@ footer {
 
     .filter-btn {
         margin: 10px;
+		margin-left: 15px;
     }
 
     .filter-buttons {
         flex-direction: row;
         flex-wrap: wrap;
-        margin: 0 5px;
+        margin: 0px;
         justify-content: flex-start;
     }
 
     .filters button:nth-child(1) {
         order: 1;
+		width: 40%;
     }
 
     .filters button:nth-child(2) {
@@ -731,10 +733,12 @@ footer {
 
     .filters button:nth-child(3) {
         order: 2;
+		width: 45%;
     }
 
     .filters button:nth-child(4) {
         order: 4;
+		width: 55%;
     }
 
     .button-text {
@@ -992,7 +996,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 450px) and (max-width: 767px) {
 
     body {
         width: 100%;
